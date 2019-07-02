@@ -1,0 +1,156 @@
+{"login":{"operId": "15616699600", "operPwd": "123456"},
+"operId_null":{"operId": "", "operPwd": "123456"},
+"operPwd_null":{"operId": "15616699600", "operPwd": ""},
+"operId_error":{"operId": "15616699601", "operPwd": "123456"},
+"operPwd_error":{"operId": "15616699600", "operPwd": "123453"},
+"home":{},
+"distributeCustList":{},
+"distribute":{"pageNo": "1","pageSize": "10","custid": ""},
+"boroughtList":{},
+"searchBoroughList":{"pageNo": "1","pageSize": "10","searchKey": "万科"},
+"boroughPicUrlList":{"pageNo": "1","pageSize": "10","id": ""},
+"articleTabList":{},
+"articleList":{"pageNo": "1","pageSize": "10","topClassifyId": ""},
+"searchArticleList":{"pageNo": "1","pageSize": "10","searchKey": "广州"},
+"articleHotSearch":{"pageNo": "1","pageSize": "10","size": "10"},
+"myguest_get":{},
+"myguest":{"keywords": "","isStar": "","custLevel": "","udClientStatus": "","pageNo": "1","pageSize": "10"},
+"guestdetail":{},
+"follow_add":{
+	"pageNo": "1",
+	"pageSize": "10",
+	"custid": "",
+	"followType": "1",
+	"followStatus": "",
+	"followContent": "",
+	"followTitle": "",
+	"followOperate": "",
+	"followRoute": "",
+	"followProduct": "4",
+	"followTime": ""
+	},
+"follow_list":{
+	"pageNo": "1",
+	"pageSize": "10",
+	"custid": "",
+	"operId": "",
+	"followType": "1",
+	"followStatus": "",
+	"clientName": "",
+	"operName": ""
+	},
+"follow_clientpage":{
+	"pageNo": "1",
+	"pageSize": "10",
+	"selectStartTime": "",
+	"selectEndTime": "",
+	"selectTab": "2",
+	"operId": ""
+	},
+"locus_list":{
+	"pageNo": "1",
+	"pageSize": "10",
+	"locusId": "",
+	"operId": "",
+	"custid": "",
+	"locusType": "",
+	"operName": "",
+	"clientName": ""
+	},
+"addorupdate":{
+	"pageNo": "1",
+	"pageSize": "10",
+	"reportingId": "",
+	"custid": "",
+	"projectinfoId": "",
+	"reportingType": "1",
+	"reportingContent": "",
+	"reportingStatus": "1"
+	},
+"reporting_list":{
+	"pageNo": "1",
+	"pageSize": "10",
+	"reportingId": "",
+	"custid": "",
+	"projectinfoId": "",
+	"operId": "",
+	"reportingType": "",
+	"operName": "",
+	"clientName": "",
+	"clientTypes": "",
+	"limits": ""
+	},
+"getBoroughList":{
+	"pageNo": "1",
+	"pageSize": "10",
+	"custid": ""
+	},
+"getclientreportinglist":{
+	"pageNo": "1",
+	"pageSize": "10",
+	"custid": ""
+	},
+"reportinglist":{
+	"pageNo": "1",
+	"pageSize": "10",
+	"custid": "",
+	"projectinfoId": "",
+	"reportingType": "",
+	"clientTypes": ""
+	},
+"upstar":{
+	"pageNo": "1",
+	"pageSize": "10",
+	"custid": "",
+	"isStar": "1"
+	},
+"guest_boroughList":{
+	"pageNo": "1",
+	"pageSize": "10",
+	"custid": ""
+	},
+"missionList":{
+	"pageNo": "1",
+	"pageSize": "10",
+	"state": "1"
+	},
+"waitCallList":{
+	"pageNo": "1",
+	"pageSize": "10",
+	"missionId": "",
+	"callOutState": "0"
+	},
+"archive":{
+	"pageNo": "1",
+	"pageSize": "10",
+	"id": "",
+	"archiveResult": "1"
+	},
+"user_update":{
+	"pageNo": "1",
+	"pageSize": "10",
+	"id": "",
+	"operName": "测试客户",
+	"age": 0,
+	"exp": "",
+	"intro": "",
+	"serveRegion": "",
+	"faceImage": "",
+	"wxQrcodeUrl": ""
+	},
+"user_get":{},
+"touxiang_upload":{},
+"select-area":{},
+"edit-pwd":{
+	"pageNo": "1",
+	"pageSize": "10",
+	"oldPwd": "123456",
+	"newPwd": "888888"
+	},
+"user_my":{}
+}
+
+
+
+
+
