@@ -3,6 +3,7 @@ from data.get_data import GetData
 from util.common_util import CommonUtil
 from base.run_method import RunMethod
 from data.dependent_data import DependentData
+from util.send_email import SendEmail
 import json
 
 class RunCommon:
@@ -12,10 +13,13 @@ class RunCommon:
         self.data = GetData(self.excel_file, self.json_file)
         self.run_method = RunMethod()
         self.util = CommonUtil()
+        self.email = SendEmail()
 
     def go_run_case(self):
         # 获取用例行数
         row_count = self.data.get_case_line()
+        pass_count = []
+        fail_count = []
         # 循环用例
         for i in range(1, row_count):
             # 获取isrun，是否运行该用例
@@ -56,11 +60,14 @@ class RunCommon:
                 print("期望结果：", expect_res)
                 if self.util.is_contain(expect_res, response):
                     self.data.write_result(i, "测试通过")
+                    pass_count.append(i)
                     print("测试通过")
                 else:
                     self.data.write_result(i, "测试失败")
+                    fail_count.append(i)
                     print("测试失败")
                 self.data.write_response(i, response)
+        self.email.send_main(pass_count, fail_count)
         return response
 
 if __name__ == '__main__':

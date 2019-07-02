@@ -3,6 +3,7 @@ from data.get_data import GetData
 from util.common_util import CommonUtil
 from base.run_method import RunMethod
 from data.dependent_data import DependentData
+from util.send_email import SendEmail
 import json
 
 class GuestApi:
@@ -12,12 +13,15 @@ class GuestApi:
         self.data = GetData(self.excel_file, self.json_file)
         self.run_method = RunMethod()
         self.util = CommonUtil()
+        self.email = SendEmail()
 
     def go_to_guest(self):
         # self.run_comm = RunCommon(self.excel_file, self.json_file)
         # self.run_comm.go_run_case()
         # 获取用例行数
         row_count = self.data.get_case_line()
+        pass_count = []
+        fail_count = []
         for i in range(1, row_count):
             is_run = self.data.get_is_run(i)
             if is_run:
@@ -74,11 +78,14 @@ class GuestApi:
                 print("期望结果：", expect_res)
                 if self.util.is_contain(expect_res, response):
                     self.data.write_result(i, "测试通过")
+                    pass_count.append(i)
                     print("测试通过")
                 else:
                     self.data.write_result(i, "测试失败")
+                    fail_count.append(i)
                     print("测试失败")
                 self.data.write_response(i, response)
+        self.email.send_main(pass_count, fail_count)
         return response
 
 if __name__ == '__main__':
