@@ -6,8 +6,8 @@ from util.operation_json import OperationJson
 
 """封装获取接口数据"""
 class GetData:
-    def __init__(self, filename, json_file):
-        self.operation_excel = OperationExcel(filename, 0)
+    def __init__(self, json_file, sheet_name):
+        self.operation_excel = OperationExcel(sheet_name)
         self.json_file = json_file
 
     #获取excel行数
@@ -81,14 +81,14 @@ class GetData:
         return except_data
 
     #写入实际结果
-    def write_result(self, row, value):
+    def write_result(self, row, value, sheet_id):
         col = int(data_config.get_result())
-        self.operation_excel.write_value(row, col, value)
+        self.operation_excel.write_value(row, col, value, sheet_id)
 
     #写入实际返回结果
-    def write_response(self, row, value):
+    def write_response(self, row, value, sheet_id):
         col = int(data_config.get_response())
-        self.operation_excel.write_value(row, col, value)
+        self.operation_excel.write_value(row, col, value, sheet_id)
 
     #获取依赖的返回数据
     def get_dependent_data(self, row, index):

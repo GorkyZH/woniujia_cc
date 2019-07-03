@@ -6,9 +6,10 @@ from data.get_data import GetData
 from util.common_util import CommonUtil
 from data.dependent_data import DependentData
 from util.send_email import SendEmail
-from login_api import LoginApi
-from home_api import HomeApi
-from guest_api import GuestApi
+from case.login_case import LoginCase
+from case.home_case import HomeCase
+from case.guest_case import  GuestCase
+from case.my_case import MyCase
 
 """
 主流程运行的主方法类
@@ -19,14 +20,16 @@ class RunTest:
         # self.data = GetData()
         # self.common_util = CommonUtil()
         # self.email = SendEmail()
-        self.login = LoginApi()
-        self.home = HomeApi()
-        self.guest = GuestApi()
+        self.login = LoginCase()
+        self.home = HomeCase()
+        self.guest = GuestCase()
+        self.my = MyCase()
 
     def run(self):
         self.login.go_run_login()
         self.home.go_run_home()
         self.guest.go_to_guest()
+        self.my.go_to_my()
 
     # def go_on_run(self):
     #     """获取用例行数"""

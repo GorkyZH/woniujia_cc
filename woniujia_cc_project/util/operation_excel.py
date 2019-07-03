@@ -3,28 +3,25 @@
 import xlrd
 from xlutils.copy import copy
 
-# import sys
-# sys.path.append('/Users/mac/Desktop/测试资料/python_jiekou_auto/python_jiekou_git/Demo/util')
-# sys.path.append('/Users/mac/Desktop/测试资料/python_jiekou_auto/python_jiekou_git/Demo/dataconfig/case02.xls')
-
 """
 读取excel文件工具类
 """
 class OperationExcel:
-    def __init__(self, file_name=None, sheet_id=None):
+    def __init__(self, sheet_name=None, file_name=None):
         if file_name:
             self.file_name = file_name
-            self.sheet_id = sheet_id
+            self.sheet_name = sheet_name
         else:
             # self.file_name = '../dataconfig/case02.xls'
-            self.file_name = '/Users/mac/Desktop/测试资料/蜗牛家产品线/woniujia_cc_jiekou/woniujia_cc_jiekou_git/woniujia_cc_project/dataconfig/login.xls'
-            self.sheet_id = 0
+            self.file_name = '/Users/mac/Desktop/测试资料/蜗牛家产品线/woniujia_cc_jiekou/woniujia_cc_jiekou_git/woniujia_cc_project/dataconfig/testcase.xls'
+            self.sheet_name = sheet_name
         self.data = self.get_data()
 
     # 获取sheet的内容
     def get_data(self):
         data = xlrd.open_workbook(self.file_name)
-        tables = data.sheets()[self.sheet_id]
+        #tables = data.sheets()[self.sheet_id]
+        tables = data.sheet_by_name(self.sheet_name)
         return tables
 
     # 获取单元格的行数
@@ -48,10 +45,10 @@ class OperationExcel:
             return cell_data
 
     # 往单元格中写入数据
-    def write_value(self, row, col, value):
+    def write_value(self, row, col, value, sheet_id):
         read_data = xlrd.open_workbook(self.file_name)
         write_data = copy(read_data)
-        sheet_data = write_data.get_sheet(0)
+        sheet_data = write_data.get_sheet(sheet_id)
         sheet_data.write(row, col, value)
         write_data.save(self.file_name)
 
@@ -86,8 +83,7 @@ class OperationExcel:
 
 
 if __name__ == '__main__':
-    opers = OperationExcel()
+    opers = OperationExcel("login")
     print(opers.get_lines())
     print(opers.get_cell_value(4, 7))
-    print(opers.get_cell_value_more(4, 7, 1, 1))
     print(opers.get_cell_value_more(3, 7))

@@ -10,11 +10,11 @@ import json
 数据依赖类
 """
 class DependentData:
-    def __init__(self, case_id, excel_file, json_file):
-        self.oper_excel = OperationExcel(excel_file, 0)
+    def __init__(self, case_id, sheet_name, json_file):
+        self.oper_excel = OperationExcel(sheet_name)
         self.util = CommonUtil()
         self.case_id = case_id
-        self.data = GetData(excel_file, json_file)
+        self.data = GetData(json_file, sheet_name)
 
     # 通过case_id获取case_id的整行数据
     def get_case_line_data(self):
