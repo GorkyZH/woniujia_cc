@@ -1,8 +1,5 @@
 # _*_ coding:utf-8 _*_
 import json
-import sys
-# import importlib
-# importlib.reload(sys)
 
 """
 读取json文件工具类

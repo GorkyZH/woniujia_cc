@@ -1,11 +1,4 @@
 #coding:utf-8
-import json
-
-from base.run_method import RunMethod
-from data.get_data import GetData
-from util.common_util import CommonUtil
-from data.dependent_data import DependentData
-from util.send_email import SendEmail
 from case.login_case import LoginCase
 from case.home_case import HomeCase
 from case.guest_case import  GuestCase

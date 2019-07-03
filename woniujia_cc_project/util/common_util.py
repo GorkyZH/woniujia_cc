@@ -12,7 +12,6 @@ class CommonUtil:
         :param except_res:查找的字符串
         :param actrual_res:被查找的字符串
         """
-
         flag = None
         if except_res in actrual_res:
             flag = True
