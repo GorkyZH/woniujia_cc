@@ -14,8 +14,8 @@ class SendEmail:
     global email_host
     global password
     email_host = "smtp.163.com"
-    send_user = "gorky1112@163.com"
-    password = "gorky@1112"
+    send_user = "******@163.com"
+    password = "*******"
 
     def send_email(self, user_list, sub, content):
         user = "Gorky"+"<"+send_user+">"
