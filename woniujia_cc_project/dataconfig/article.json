@@ -1,0 +1,18 @@
+{
+"注释":"先登录",
+"login":{"operId": "15616699600", "operPwd": "zh123123"},
+"注释":"获取资讯分类tab参数",
+"articleTabList":{"pageNo": "1","pageSize": "15"},
+"注释":"获取资讯列表",
+"articleList":{"pageNo": "1","pageSize": "15","topClassifyId": ""},
+"注释":"关键词为空，查询资讯列表",
+"searchArticleList_keywords_null":{"pageNo": "1","pageSize": "15","searchKey": ""},
+"注释":"输入不存在关键词，查询资讯",
+"searchArticleList_keywords_none":{"pageNo": "1","pageSize": "15","searchKey": "无厘头"},
+"注释":"输入存在的关键词，查询资讯",
+"searchArticleList_keywords_in":{"pageNo": "1","pageSize": "15","searchKey": "广州"},
+"注释":"输入存在的资讯标题，精准查询资讯",
+"searchArticleList_as_title":{"pageNo": "1","pageSize": "15","searchKey": ""},
+"注释":"获取资讯的热门搜索关键词",
+"articleHotSearch":{"pageNo": "1","pageSize": "15","size": "10"}
+}

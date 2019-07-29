@@ -10,31 +10,7 @@
 "注释":"客户id不存在/已被抢",
 "distribute_custid_error":{"pageNo": "1","pageSize": "10","custid": "759420D2CC0941A7A1596D2576688F50"},
 "注释":"客户id为空",
-"distribute_custid_null":{"pageNo": "1","pageSize": "10","custid": ""},
-"注释":"获取楼盘列表",
-"boroughtList":{},
-"注释":"模糊查询已存在的楼盘",
-"searchBoroughList_kewords_in":{"pageNo": "1","pageSize": "10","searchKey": "万科"},
-"注释":"楼盘查询关键字为空",
-"searchBoroughList_keywords_null":{"pageNo": "1","pageSize": "10","searchKey": ""},
-"注释":"查询不存在的楼盘",
-"searchBoroughList_keywords_error":{"pageNo": "1","pageSize": "10","searchKey": "wuli"},
-"注释":"精准查询已存在的楼盘",
-"searchBoroughList_kewords_exist":{"pageNo": "1","pageSize": "10","searchKey": ""},
-"注释":"楼盘列表中查询楼盘图片列表",
-"boroughPicUrlList":{"pageNo": "1","pageSize": "10","id": ""},
-"注释":"获取资讯分类tab参数",
-"articleTabList":{},
-"注释":"获取资讯列表",
-"articleList":{"pageNo": "1","pageSize": "10","topClassifyId": ""},
-"注释":"关键词为空，查询资讯",
-"searchArticleList_keywords_null":{"pageNo": "1","pageSize": "10","searchKey": ""},
-"注释":"输入不存在关键词，查询资讯",
-"searchArticleList_keywords_none":{"pageNo": "1","pageSize": "10","searchKey": "无厘头"},
-"注释":"输入存在的关键词，查询资讯",
-"searchArticleList_keywords_in":{"pageNo": "1","pageSize": "10","searchKey": "广州"},
-"注释":"获取资讯的热门搜索关键词",
-"articleHotSearch":{"pageNo": "1","pageSize": "10","size": "10"}
+
 }
 
 

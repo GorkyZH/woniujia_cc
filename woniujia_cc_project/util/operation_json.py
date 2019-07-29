@@ -17,11 +17,27 @@ class OperationJson:
             data = json.load(fp)
             return data
 
+    #获取json文件中某个字段的key
+    def get_new_json(self, key, value):
+        str_data = self.get_data(key)
+        list_data = self.get_data(key)[1:-1].split(",")
+        str_no_value = list_data[0]
+        no_value = str_no_value.split(":")[1]
+        new_no_value = str_data.replace(no_value, value)
+        return new_no_value
+
     #根据关键字获取数据
-    def get_data(self, id):
+    def get_data(self, key):
         #return self.data[id]
-        return json.dumps(self.data[id])
+        return json.dumps(self.data[key])
+
 
 if __name__ == '__main__':
-    operJson = OperationJson("/Users/mac/Desktop/测试资料/蜗牛家产品线/woniujia_cc_jiekou/woniujia_cc_jiekou_git/woniujia_cc_project/dataconfig/login.json")
+    operJson = OperationJson("/Users/mac/Desktop/测试资料/蜗牛家产品线/woniujia_cc_jiekou/woniujia_cc_jiekou_git/woniujia_cc_project/dataconfig/borought.json")
     print(operJson.get_data('login'))
+    print(operJson.get_data('boroughtList'))
+    print(operJson.get_new_json('boroughtList', '"'+str(12)+'"'))
+    # print(type(operJson.get_data('demo')))
+    # print(operJson.get_new_json('login', 'operId', '112'))
+    # print(operJson.get_new_json('boroughtList', 'pageNo', '3'))
+

@@ -3,6 +3,7 @@
 from util.operation_excel import OperationExcel
 from data import data_config
 from util.operation_json import OperationJson
+from util.connect_db import OperationMysql
 
 """封装获取接口数据"""
 class GetData:
@@ -66,19 +67,51 @@ class GetData:
             return None
         return data
 
+    # 获取是否连接数据库
+    def get_is_conn_db(self, row):
+        flag = None
+        col = int(data_config.get_conn_db())
+        conn_data_value = self.operation_excel.get_cell_value(row, col)
+        if conn_data_value == 'yes':
+            flag = True
+            # self.get_data_for_json()
+        else:
+            flag = False
+            # self.get_data_for_newjson()
+        return flag
+
     #通过关键字拿到data数据
     def get_data_for_json(self, row):
         oper_json = OperationJson(self.json_file)
         data_json = oper_json.get_data(self.get_parameter(row))
         return data_json
 
+    #通过关键字和修改请求参数值重新获取json中的请求数据
+    def get_data_for_newjson(self, row, value):
+        oper_json = OperationJson(self.json_file)
+        data_json = oper_json.get_new_json(self.get_parameter(row), value)
+        return data_json
+
     #获取预期结果
     def get_except(self, row):
         col = int(data_config.get_except())
         except_data = self.operation_excel.get_cell_value(row, col)
+        # sql_value = "%万科%"
+        # except_data = "select * from ymm_borough where city_id='62' AND is_checked = '1' AND borough_name LIKE '%s'" % sql_value
         if except_data == '':
             return None
         return except_data
+
+    #通过sql获取预期结果
+    def get_except_data_for_sql(self, row, sql_base):
+        oper_mysql = OperationMysql(sql_base)
+        except_data = self.get_except(row)
+        result = oper_mysql.search_all(except_data)
+        # if sql_value == '':
+        #     result = oper_mysql.search_all(except_data)
+        # else:
+        #     result = oper_mysql.search_all(except_data % sql_value)
+        return result
 
     #写入实际结果
     def write_result(self, row, value, sheet_id):

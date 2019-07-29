@@ -15,9 +15,10 @@ class global_var:
     data_dependent = '8' #依赖的返回数据
     key_depedent = '9'   #请求数据依赖字段
     parameter = '10'     #请求参数
-    expect = '11'        #预期结果
-    result = '12'        #实际结果
-    response = '13'      #返回结果
+    conn_db = '11'       #是否连接数据库
+    expect = '12'        #预期结果
+    result = '13'        #实际结果
+    response = '14'      #返回结果
 
 #获取模块
 def get_module():
@@ -73,6 +74,10 @@ def get_key_dependent():
 #获取请求参数
 def get_parameter():
     return global_var.parameter
+
+#获取是否连接数据库
+def get_conn_db():
+    return global_var.conn_db
 
 #获取预期结果
 def get_except():

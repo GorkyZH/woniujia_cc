@@ -35,4 +35,3 @@ class RunMethod:
         return json.dumps(result, ensure_ascii=False)
         #return result
 
-    

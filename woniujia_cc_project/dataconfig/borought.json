@@ -1,0 +1,16 @@
+{
+"注释":"先登录",
+"login":{"operId": "15616699600", "operPwd": "zh123123"},
+"注释":"获取楼盘列表",
+"boroughtList":{"pageNo":"1", "pageSize":"15"},
+"注释":"模糊查询已存在的楼盘",
+"searchBoroughList_kewords_in":{"pageNo": "1", "pageSize": "15", "searchKey": "万科"},
+"注释":"楼盘查询关键字为空",
+"searchBoroughList_keywords_null":{"pageNo": "1", "pageSize": "15", "searchKey": ""},
+"注释":"查询不存在的楼盘",
+"searchBoroughList_keywords_error":{"pageNo": "1", "pageSize": "15", "searchKey": "哈哈"},
+"注释":"精准查询已存在的楼盘",
+"searchBoroughList_kewords_exist":{"pageNo": "1", "pageSize": "15", "searchKey": "瑞悦府"},
+"注释":"楼盘列表中查询楼盘图片列表",
+"boroughPicUrlList":{"pageNo": "1","pageSize": "15", "id": ""}
+}
