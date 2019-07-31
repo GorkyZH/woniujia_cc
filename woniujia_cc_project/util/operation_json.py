@@ -33,7 +33,7 @@ class OperationJson:
 
 
 if __name__ == '__main__':
-    operJson = OperationJson("/Users/mac/Desktop/测试资料/蜗牛家产品线/woniujia_cc_jiekou/woniujia_cc_jiekou_git/woniujia_cc_project/dataconfig/borought.json")
+    operJson = OperationJson("/Users/mac/Desktop/测试资料/蜗牛家产品线/woniujia_cc_jiekou/woniujia_cc_jiekou_git/woniujia_cc_project/dataconfig/request_pram.json")
     print(operJson.get_data('login'))
     print(operJson.get_data('boroughtList'))
     print(operJson.get_new_json('boroughtList', '"'+str(12)+'"'))

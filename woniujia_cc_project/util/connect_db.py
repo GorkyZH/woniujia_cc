@@ -40,7 +40,8 @@ class OperationMysql:
 
 if __name__ == '__main__':
     oper_mysql = OperationMysql("testwoniujia")
-    sql = "select * from ymm_borough where city_id='62' AND is_checked = '1' AND borough_name like '%万科%'"
+    # sql = "select * from ymm_borough where city_id='62' AND is_checked = '1' AND borough_name like '%万科%'"
+    sql = "select * from ymm_borough where city_id='62' AND is_checked = '1' AND borough_name='哈哈'"
     res = oper_mysql.search_all(sql)
     print("查询数据：", res)
     print(type(res))

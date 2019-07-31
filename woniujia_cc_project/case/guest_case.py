@@ -8,9 +8,9 @@ import json
 
 class GuestCase:
     def __init__(self):
-        self.json_file = "/Users/mac/Desktop/测试资料/蜗牛家产品线/woniujia_cc_jiekou/woniujia_cc_jiekou_git/woniujia_cc_project/dataconfig/guest.json"
+        self.json_file = "/Users/mac/Desktop/测试资料/蜗牛家产品线/woniujia_cc_jiekou/woniujia_cc_jiekou_git/woniujia_cc_project/dataconfig/request_pram.json"
         self.sheet_name = "客户模块"
-        self.sheet_id = 3
+        self.sheet_id = 5
         self.data = GetData(self.json_file, self.sheet_name, self.sheet_id)
         self.run_method = RunMethod()
         self.util = CommonUtil()

@@ -4,7 +4,7 @@ from main.run_common import RunCommon
 class MyCase:
     def __init__(self):
         self.json_file = "/Users/mac/Desktop/测试资料/蜗牛家产品线/woniujia_cc_jiekou/woniujia_cc_jiekou_git/" \
-                         "woniujia_cc_project/dataconfig/my.json"
+                         "woniujia_cc_project/dataconfig/request_pram.json"
         self.sheet_name = "我的模块"
         self.sheet_id = 3
 

@@ -7,7 +7,7 @@ from util.send_email import SendEmail
 import json
 
 class Run:
-    def __init__(self, json_file, sheet_name, sheet_id, sql_base):
+    def __init__(self, json_file, sheet_name, sheet_id, sql_base=None):
         self.json_file = json_file
         self.sheet_name = sheet_name
         self.sheet_id = sheet_id
@@ -89,7 +89,7 @@ class Run:
             print("测试失败")
 
     # 执行用例
-    def go_to_run(self, sql_key, response_key):
+    def go_to_run(self, sql_key=None, response_key=None):
         # 获取用例行数
         row_count = self.data.get_case_line()
         pass_count = []
