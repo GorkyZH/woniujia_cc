@@ -48,9 +48,9 @@ class Run:
             depend_data = DependentData(depend_morecase, self.sheet_name, self.json_file)
             dependent_response_data = depend_data.get_data_for_key(i, 0)
             depend_key = self.data.get_dependent_key(i, 0)
-            print("depend_key", depend_key)
+            # print("depend_key", depend_key)
             jsonData = json.loads(data)
-            print("data:", data)
+            # print("data:", data)
             jsonData[depend_key] = dependent_response_data
             requestData = json.dumps(jsonData)
             response = self.run_method.run_main(request_type, url, requestData, token_header)  # 获取接口返回数据（返回类型：string型）
@@ -121,7 +121,7 @@ class Run:
                 else:
                     data = self.data.get_data_for_json(i)
                     expect_res = self.data.get_except(i)
-                    print("期望结果：", expect_res)
+                    # print("期望结果：", expect_res)
                     if i == 1:
                         header = self.data.get_header(i)
                         response = self.run_method.run_main(request_type, url, data, header)
@@ -129,13 +129,13 @@ class Run:
                         # 获取token、operid并写入文件中
                         with open(self.util.base_dir(), 'w') as f:
                             f.write(res["data"]["token"] + "," + res["data"]["id"])
-                        print("获取token：", res["data"]["token"])
+                        # print("获取token：", res["data"]["token"])
                     else:
                         token = self.util.getToken(0)
                         operid = self.util.getToken(1)
                         token_header = self.data.get_token_header(i, token)
                         response = self.run_method.run_main(request_type, url, data, token_header)
-                    print("返回结果：", response)
+                    # print("返回结果：", response)
                     result = self.util.is_contain(expect_res, response)
                     self.write_result(fail_count, i, pass_count, result)
 

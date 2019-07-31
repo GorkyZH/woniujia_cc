@@ -5,7 +5,7 @@ from data import data_config
 from util.operation_json import OperationJson
 from util.connect_db import OperationMysql
 
-"""封装获取接口数据"""
+"""封装获取excel中的数据"""
 class GetData:
     def __init__(self, json_file, sheet_name):
         self.operation_excel = OperationExcel(sheet_name)
