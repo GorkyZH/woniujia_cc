@@ -481,5 +481,204 @@
 	"newPwd": "888888",
     "editPwdKey": ""
 	},
-"user_my":{}
+"user_my":{},
+"模块":"------------------------------------------分销模块-----------------------------------------------",
+"注释":"获取新房分销列表",
+"distribution_list":{
+    "pageNo": "1",
+	"pageSize": "15"
+    },
+"注释":"获取报备楼盘列表",
+"report_build_list":{
+    "pageNo": "1",
+	"pageSize": "15",
+	"boroughInfoName": ""
+    },
+"注释":"新增报备：客户姓名不填",
+"new_report_name_null":{
+    "clientName": "",
+	"sex": "",
+	"estimateVisitTime": "",
+	"clientNumber": "15232108789",
+	"boroughInfoId": "",
+	"remark": ""
+},
+"注释":"新增报备：客户电话不填",
+"new_report_phone_null":{
+    "clientName": "测试",
+	"sex": "",
+	"estimateVisitTime": "",
+	"clientNumber": "",
+	"boroughInfoId": "",
+	"remark": ""
+},
+"注释":"新增报备：客户姓名输入纯中文",
+"new_report_name_zh":{
+    "clientName": "测试",
+	"sex": "",
+	"estimateVisitTime": "",
+	"clientNumber": "15232108789",
+	"boroughInfoId": "",
+	"remark": ""
+},
+"注释":"新增报备：客户姓名输入特殊符号",
+"new_report_name_symbol":{
+    "clientName": "%¥#@",
+	"sex": "",
+	"estimateVisitTime": "",
+	"clientNumber": "15232108790",
+	"boroughInfoId": "",
+	"remark": ""
+},
+"注释":"新增报备：客户姓名输入纯数字",
+"new_report_name_number":{
+    "clientName": "1212",
+	"sex": "",
+	"estimateVisitTime": "",
+	"clientNumber": "15232108791",
+	"boroughInfoId": "",
+	"remark": ""
+},
+"注释":"新增报备：客户姓名输入纯英文",
+"new_report_name_en":{
+    "clientName": "sddf",
+	"sex": "",
+	"estimateVisitTime": "",
+	"clientNumber": "15232108792",
+	"boroughInfoId": "",
+	"remark": ""
+},
+"注释":"新增报备：手机号输入少于11位",
+"new_report_phone_10":{
+    "clientName": "测试",
+	"sex": "",
+	"estimateVisitTime": "",
+	"clientNumber": "1523210879",
+	"boroughInfoId": "",
+	"remark": ""
+},
+"注释":"新增报备：手机号输入大于11位",
+"new_report_phone_12":{
+    "clientName": "测试",
+	"sex": "",
+	"estimateVisitTime": "",
+	"clientNumber": "152321087921",
+	"boroughInfoId": "",
+	"remark": ""
+},
+"注释":"新增报备：手机号输入非数字",
+"new_report_phone_en":{
+    "clientName": "测试",
+	"sex": "",
+	"estimateVisitTime": "",
+	"clientNumber": "152e2108rg1",
+	"boroughInfoId": "",
+	"remark": ""
+},
+"注释":"新增报备：手机号输入隐号11位",
+"new_report_phone_hidden":{
+    "clientName": "测试",
+	"sex": "",
+	"estimateVisitTime": "",
+	"clientNumber": "152****9012",
+	"boroughInfoId": "",
+	"remark": ""
+},
+"注释":"新增报备：楼盘id不填",
+"new_report_build_null":{
+    "clientName": "测试",
+	"sex": "",
+	"estimateVisitTime": "",
+	"clientNumber": "15212329012",
+	"boroughInfoId": "",
+	"remark": ""
+},
+"注释":"新增报备：正常输入参数",
+"new_report_normal":{
+    "clientName": "测试",
+	"sex": "先生",
+	"estimateVisitTime": "2019-08-29 14:30:00",
+	"clientNumber": "15212329012",
+	"boroughInfoId": "",
+	"remark": "报备"
+},
+"注释":"获取我的全部报备记录",
+"mine_report":{
+    "pageNo": "1",
+	"pageSize": "15",
+	"state": "",
+	"keyword": ""
+},
+"注释":"获取已报备的报备记录",
+"already_report":{
+    "pageNo": "1",
+	"pageSize": "15",
+	"state": "2",
+	"keyword": ""
+},
+"注释":"获取已带看的报备记录",
+"visit_report":{
+    "pageNo": "1",
+	"pageSize": "15",
+	"state": "3",
+	"keyword": ""
+},
+"注释":"获取已成交的报备记录",
+"deal_report":{
+    "pageNo": "1",
+	"pageSize": "15",
+	"state": "4",
+	"keyword": ""
+},
+"注释":"查询报备：输入不存在的state",
+"no_state_report":{
+    "pageNo": "1",
+	"pageSize": "15",
+	"state": "6",
+	"keyword": ""
+},
+"注释":"查询报备：输入不存在的手机号码",
+"no_mobile_report":{
+    "pageNo": "1",
+	"pageSize": "15",
+	"state": "",
+	"keyword": ""
+},
+"注释":"查询报备：输入存在的手机号码关键词模糊查询",
+"like_mobile_report":{
+    "pageNo": "1",
+	"pageSize": "15",
+	"state": "",
+	"keyword": "132"
+},
+"注释":"查询报备：输入存在的客户名称关键词模糊查询",
+"like_name_report":{
+    "pageNo": "1",
+	"pageSize": "15",
+	"state": "",
+	"keyword": "张"
+},
+"注释":"查询报备：输入不存在的客户名称",
+"no_name_report":{
+    "pageNo": "1",
+	"pageSize": "15",
+	"state": "",
+	"keyword": "郑虹"
+},
+"注释":"查询报备：输入存在的客户名称精准查询",
+"has_name_report":{
+    "pageNo": "1",
+	"pageSize": "15",
+	"state": "",
+	"keyword": "erer"
+},
+"注释":"查询报备：输入存在的客户名称精准查询",
+"has_mobile_report":{
+    "pageNo": "1",
+	"pageSize": "15",
+	"state": "",
+	"keyword": "13452698056"
+},
+"注释":"获取已成交的报备记录",
+"detail_report":{}
 }

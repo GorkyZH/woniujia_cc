@@ -12,7 +12,7 @@ class ArticleCase:
 
     def go_to_article(self):
         run = Run(self.json_file, self.sheet_name, self.sheet_id, self.db)
-        run.go_to_run("title", "title")
+        run.go_to_run()
 
 if __name__ == '__main__':
     article = ArticleCase()

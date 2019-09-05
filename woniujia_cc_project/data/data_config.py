@@ -15,10 +15,13 @@ class global_var:
     data_dependent = '8' #依赖的返回数据
     key_depedent = '9'   #请求数据依赖字段
     parameter = '10'     #请求参数
-    conn_db = '11'       #是否连接数据库
-    expect = '12'        #预期结果
-    result = '13'        #实际结果
-    response = '14'      #返回结果
+    response_key = '11'  #接口返回字段
+    conn_db = '12'       #是否连接数据库
+    sql_key = '13'       #查询表返回的字段名
+    sql_type = '14'
+    expect = '15'        #预期结果
+    result = '16'        #实际结果
+    response = '17'      #返回结果
 
 #获取模块
 def get_module():
@@ -75,9 +78,21 @@ def get_key_dependent():
 def get_parameter():
     return global_var.parameter
 
+#获取接口返回的字段名
+def get_response_key():
+    return global_var.response_key
+
 #获取是否连接数据库
 def get_conn_db():
     return global_var.conn_db
+
+#获取表中查询出的字段名
+def get_sql_key():
+    return global_var.sql_key
+
+#获取对比列表还是总数
+def get_sql_type():
+    return global_var.sql_type
 
 #获取预期结果
 def get_except():

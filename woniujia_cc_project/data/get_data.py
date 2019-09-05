@@ -113,17 +113,17 @@ class GetData:
         #     result = oper_mysql.search_all(except_data % sql_value)
         return result
 
-    #写入实际结果
+    # 写入实际结果
     def write_result(self, row, value, sheet_id):
         col = int(data_config.get_result())
         self.operation_excel.write_value(row, col, value, sheet_id)
 
-    #写入实际返回结果
+    # 写入实际返回结果
     def write_response(self, row, value, sheet_id):
         col = int(data_config.get_response())
         self.operation_excel.write_value(row, col, value, sheet_id)
 
-    #获取依赖的返回数据
+    # 获取依赖的返回数据
     def get_dependent_data(self, row, index):
         col = int(data_config.get_data_dependent())
         #dependent_data = self.operation_excel.get_cell_value(row, col)
@@ -132,7 +132,7 @@ class GetData:
             return None
         return dependent_data
 
-    #判断是否存在依赖case
+    # 判断是否存在依赖case
     def is_depend(self, row):
         col = int(data_config.get_case_dependent())
         dependent_case_id = self.operation_excel.get_cell_value(row, col)
@@ -164,6 +164,35 @@ class GetData:
         else:
             return dependent_key
 
+    # 获取接口返回的字段
+    def get_response_key(self, row, index=None):
+        col = int(data_config.get_response_key())
+        response_key = self.operation_excel.get_cell_value(row, col)
+        if response_key == '':
+            return None
+        else:
+            return response_key
+
+    # 获取数据库中查询出的字段
+    def get_sql_key(self, row, index=None):
+        col = int(data_config.get_sql_key())
+        sql_key = self.operation_excel.get_cell_value(row, col)
+        if sql_key == '':
+            return None
+        # if ',' in sql_key:
+        #     sql_key_id = sql_key.split(',')[index]
+        #     return sql_key_id
+        else:
+            return sql_key
+
+    # 获取对比类型
+    def get_sql_type(self, row):
+        col = int(data_config.get_sql_type())
+        sql_type = self.operation_excel.get_cell_value(row, col)
+        if sql_type == '':
+            return None
+        else:
+            return sql_type
 
 
 
